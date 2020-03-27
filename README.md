@@ -48,6 +48,7 @@ auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv]
 # 配置文件
 ## 配置方法
 * `infrastructure_layout.json` : 基建布局
+
     配置指南 : 打开游戏后进入基建，点击左上角的“进驻总览”，并按照从上到下的顺序将设施的名字依次按照`"设施名" : "序号"`的方式填入json文件中
     `序号` : 代表你这个设施是从上到下的第几个
     
