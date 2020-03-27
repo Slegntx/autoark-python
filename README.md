@@ -95,6 +95,9 @@ auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv]
     > 5. 编写排班表时请避开3:30~4:05的时间段，否则可能执行到一半弹出“信息已更新”
     > 6.`infrastructure_schedule.json`与`infrastructure_layout.json`中填写的设施名称严格对应
     
+## 配置文件示例
+
+
 # 使用示例
 
 # 目录结构
