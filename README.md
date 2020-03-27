@@ -36,12 +36,12 @@ auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv]
     * 自动3次公招，识别最优tag组合
 * 手动任务
     （指手动运行上面的计划任务）
-> 此脚本并不能智能识别基建干员工作情况，需要用户自行提供排班表，脚本只能严格按照排班表执行。
+   > 此脚本并不能智能识别基建干员工作情况，需要用户自行提供排班表，脚本只能严格按照排班表执行。
 # 安装指南 
 1. 安装 [Python与pip](python.org) 并添加至环境变量
 2. 安装项目依赖 `opencv-python` 以及 `numpy`
 
-      pip install cv2 numpy
+         pip install cv2 numpy
 3. 安装 [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb) 并添加至系统环境变量
 
     > 当你在shell或终端中输入 `adb` 后发现被英文刷屏了就说明你安装成功了
