@@ -19,38 +19,56 @@
 auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv] 以及 [Android Debug Bridge (adb)][https://developer.android.com/studio/command-line/adb] 的明日方舟自动化脚本。
 理论上支持任何分辨率，支持adb调试的安卓手机或安卓模拟器。
 
-##原理
+## 原理
 
 1. 使用 `adb shell` 和 `adb pull` 命令获取游戏截图，暂时保存在screenshots文件夹中
+
 2. 根据不同的状态，使用opencv的模板匹配(Template Matching)功能寻找点击坐标
 
    > 由于模板匹配需要相同分辨率匹配，所以首先将获取到的截图高度等比例压缩至720px
 
 3. 使用 `adb shell input` 命令模拟用户输入
+
 ## 功能列表
+
 * 计划任务
+
     * 根据用户排班表自动安排基建排班
+    
     * 被用户顶掉后定时再次上线
+    
     * 自动清理智（可指定副本以及次数）
+    
     * 自动购买信用商店物品（可自行设置购买优先级）
+    
     * 自动领取每天4AM的线索
+    
     * 自动赠送线索（指定/随机目标，全部赠送/重复赠送）
+    
     * 自动完成每日任务
+    
     * 自动3次公招，识别最优tag组合
+    
 * 手动任务
 
     （指手动运行上面的计划任务）
     
    > 此脚本并不能智能识别基建干员工作情况，需要用户自行提供排班表，脚本只能严格按照排班表执行。
+   
 # 安装指南 
+
 1. 安装 [Python与pip](python.org) 并添加至环境变量
+
 2. 安装项目依赖 `opencv-python` 以及 `numpy`
 
        pip install cv2 numpy
+       
 3. 安装 [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb) 并添加至系统环境变量
 
     > 当你在shell或终端中输入 `adb` 后发现被英文刷屏了就说明你安装成功了
+    
 # 配置文件
+
 ## 配置方法
 
 * `infrastructure_layout.json` : 基建布局
@@ -78,5 +96,7 @@ auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv]
     > 6.`infrastructure_schedule.json`与`infrastructure_layout.json`中填写的设施名称严格对应
     
 # 使用示例
+
 # 目录结构
+
 # 版本更新
