@@ -20,6 +20,7 @@ auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv]
 ##原理
 1. 使用 `adb shell` 和 `adb pull` 命令获取游戏截图，暂时保存在screenshots文件夹中
 2. 根据不同的状态，使用opencv的模板匹配(Template Matching)功能寻找点击坐标
+
    > 由于模板匹配需要相同分辨率匹配，所以首先将获取到的截图高度等比例压缩至720px
 
 3. 使用 `adb shell input` 命令模拟用户输入
@@ -40,20 +41,25 @@ auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv]
 1. 安装 [Python与pip](python.org) 并添加至环境变量
 2. 安装项目依赖 `opencv-python` 以及 `numpy`
 
-   pip install cv2 numpy
+      pip install cv2 numpy
 3. 安装 [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb) 并添加至系统环境变量
+
     > 当你在shell或终端中输入 `adb` 后发现被英文刷屏了就说明你安装成功了
 # 配置文件
 ## 配置方法
 * `infrastructure_layout.json` : 基建布局
     配置指南 : 打开游戏后进入基建，点击左上角的“进驻总览”，并按照从上到下的顺序将设施的名字依次按照`"设施名" : "序号"`的方式填入json文件中
     `序号` : 代表你这个设施是从上到下的第几个
+    
     > 如果有多个同样的设施，应在设施名后加上序号区分，如：`制造站1`,`制造站2`
 * `infrastructure_schedule.json` : 干员排班表
+
     json文件中的键值对组成如下
+    
         "hh:mm" : {
             "设施1" : ["干员1","干员2"],
         }
+        
     > 注意：
     > 1. 每天第一个时刻对应的值中应该包含所有的设施以及排班情况的键值对
     > 2. 之后的时刻对应的值中，可以只包含需要人员变动的设施及其对应的完整值班干员名单
