@@ -41,7 +41,7 @@ auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv]
 1. 安装 [Python与pip](python.org) 并添加至环境变量
 2. 安装项目依赖 `opencv-python` 以及 `numpy`
 
-         pip install cv2 numpy
+       pip install cv2 numpy
 3. 安装 [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb) 并添加至系统环境变量
 
     > 当你在shell或终端中输入 `adb` 后发现被英文刷屏了就说明你安装成功了
