@@ -1,5 +1,6 @@
 # auto-arknights-python
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
 基于opencv-python的明日方舟多功能自动化脚本
 
 # 目录
@@ -17,7 +18,9 @@
 # 项目介绍
 auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv] 以及 [Android Debug Bridge (adb)][https://developer.android.com/studio/command-line/adb] 的明日方舟自动化脚本。
 理论上支持任何分辨率，支持adb调试的安卓手机或安卓模拟器。
+
 ##原理
+
 1. 使用 `adb shell` 和 `adb pull` 命令获取游戏截图，暂时保存在screenshots文件夹中
 2. 根据不同的状态，使用opencv的模板匹配(Template Matching)功能寻找点击坐标
 
@@ -35,7 +38,9 @@ auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv]
     * 自动完成每日任务
     * 自动3次公招，识别最优tag组合
 * 手动任务
+
     （指手动运行上面的计划任务）
+    
    > 此脚本并不能智能识别基建干员工作情况，需要用户自行提供排班表，脚本只能严格按照排班表执行。
 # 安装指南 
 1. 安装 [Python与pip](python.org) 并添加至环境变量
@@ -47,12 +52,15 @@ auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv]
     > 当你在shell或终端中输入 `adb` 后发现被英文刷屏了就说明你安装成功了
 # 配置文件
 ## 配置方法
+
 * `infrastructure_layout.json` : 基建布局
 
     配置指南 : 打开游戏后进入基建，点击左上角的“进驻总览”，并按照从上到下的顺序将设施的名字依次按照`"设施名" : "序号"`的方式填入json文件中
+    
     `序号` : 代表你这个设施是从上到下的第几个
     
     > 如果有多个同样的设施，应在设施名后加上序号区分，如：`制造站1`,`制造站2`
+    
 * `infrastructure_schedule.json` : 干员排班表
 
     json文件中的键值对组成如下
@@ -68,6 +76,7 @@ auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv]
     > 4. 编写排班表时请避免让干员出现注意力涣散的情况，否则会使立绘变红影响模板识别
     > 5. 编写排班表时请避开3:30~4:05的时间段，否则可能执行到一半弹出“信息已更新”
     > 6.`infrastructure_schedule.json`与`infrastructure_layout.json`中填写的设施名称严格对应
+    
 # 使用示例
 # 目录结构
 # 版本更新
