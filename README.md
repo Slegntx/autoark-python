@@ -16,7 +16,7 @@
 * 版本更新
 
 # 项目介绍
-auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv] 以及 [Android Debug Bridge (adb)][https://developer.android.com/studio/command-line/adb] 的明日方舟自动化脚本。
+auto-arknights-python是基于 [opencv-python](https://github.com/opencv/opencv) 以及 [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb) 的明日方舟自动化脚本。
 理论上支持任何分辨率，支持adb调试的安卓手机或安卓模拟器。
 
 ## 原理
