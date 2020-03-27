@@ -20,7 +20,7 @@ auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv]
 ##原理
 1. 使用 `adb shell` 和 `adb pull` 命令获取游戏截图，暂时保存在screenshots文件夹中
 2. 根据不同的状态，使用opencv的模板匹配(Template Matching)功能寻找点击坐标
-> 由于模板匹配需要相同分辨率匹配，所以首先将获取到的截图高度等比例压缩至720px
+   > 由于模板匹配需要相同分辨率匹配，所以首先将获取到的截图高度等比例压缩至720px
 
 3. 使用 `adb shell input` 命令模拟用户输入
 ## 功能列表
@@ -39,7 +39,8 @@ auto-arknights-python是基于 [opencv-python][https://github.com/opencv/opencv]
 # 安装指南 
 1. 安装 [Python与pip](python.org) 并添加至环境变量
 2. 安装项目依赖 `opencv-python` 以及 `numpy`
-        pip install cv2 numpy
+
+   pip install cv2 numpy
 3. 安装 [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb) 并添加至系统环境变量
     > 当你在shell或终端中输入 `adb` 后发现被英文刷屏了就说明你安装成功了
 # 配置文件
