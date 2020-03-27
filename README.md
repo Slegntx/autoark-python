@@ -1,5 +1,6 @@
 # auto-arknights-python
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+![AutoArk](/images/logo.png)
 
 基于opencv-python的明日方舟多功能自动化脚本
 
