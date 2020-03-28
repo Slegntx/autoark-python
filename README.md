@@ -98,6 +98,7 @@ auto-arknights-python是基于 [opencv-python](https://github.com/opencv/opencv)
     
 ## 配置文件示例
 
+`/config`文件夹下有我个人自用的 243 配置文件供各位参考
 
 # 使用示例
 
